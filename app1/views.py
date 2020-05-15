@@ -31,16 +31,16 @@ class Login_user(generics.ListAPIView):
 def login(request):
     return render(request,'login.html')
 
-def Login_user(request):
-    email = request.POST.get('email')
-    password = request.POST.get('password')
-    if RegistersModel.objects.get(email=email, password=password):
-        return render(request,'TODO.html')
-    else:
-        messages.error(request, 'invalid username or password')
-        return render(request,'login.html')
-    authentication_classes = BasicAuthentication
-    permission_classes = IsAuthenticatedOrReadOnly
+# def Login_user(request):
+#     email = request.POST.get('email')
+#     password = request.POST.get('password')
+#     if RegistersModel.objects.get(email=email, password=password):
+#         return render(request,'TODO.html')
+#     else:
+#         messages.error(request, 'invalid username or password')
+#         return render(request,'login.html')
+#     authentication_classes = BasicAuthentication
+#     permission_classes = IsAuthenticatedOrReadOnly
 
 
 class Creat_task(ModelViewSet):

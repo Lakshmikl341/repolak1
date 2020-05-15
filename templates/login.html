@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1>Login Page</h1>
+<form action="{% url 'log' %}"method="post">
+    {% csrf_token %}
+    Email
+<input type="email" placeholder="email" required name="email">
+    password
+<input type="password" placeholder="password" maxlength="10" min="15" name="password">
+<button type="submit">Login</button>
+</form>
+</body>
+</html>
+<html>
+<body>
+
+{#<html>#}
+{#<body>#}
+{##}
+{#<form action="{% url 'login' %}"method="post">#}
+{#    {% csrf_token %}#}
+{#        {{ forms.email }}#}
+{#        {{ forms.password }}#}
+{#<button type="submit">Login</button>#}
+{#    </form>#}
+{##}
+{##}
+{#</body>#}
+{#</html>#}
